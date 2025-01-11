@@ -9,7 +9,7 @@ import csv
 # Инициализируем драйвер
 driver = webdriver.Chrome()
 
-url = 'https://www.divan.ru/kaluga/category/divany-i-kresla?types%5B%5D=1&types%5B%5D=4&types%5B%5D=54'
+url = 'https://www.divan.ru/kaluga/category/divany-i-kresla?types%5B%5D=1&types%5B%5D=4'
 
 try:
     # Открываем страницу
