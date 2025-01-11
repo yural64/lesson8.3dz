@@ -2,6 +2,7 @@
 
 import csv
 import matplotlib.pyplot as plt
+import numpy as np
 
 # Имя CSV-файла
 file_name = "divan_prices.csv"
@@ -23,11 +24,15 @@ try:
 
     # Построение гистограммы
     plt.figure(figsize=(10, 6))
-    plt.hist(prices, bins=10, color='blue', edgecolor='black', alpha=0.7)
+    plt.hist(prices, bins=20, color='blue', edgecolor='black', alpha=0.7)
     plt.title("Распределение цен на диваны")
     plt.xlabel("Цена, руб.")
     plt.ylabel("Количество")
     plt.grid(axis='y', linestyle='--', alpha=0.7)
+
+    # Устанавливаем шаг шкалы по оси X
+    max_price = max(prices) if prices else 0
+    plt.xticks(np.arange(0, max_price + 10000, 10000))
 
     # Сохранение гистограммы как изображения (опционально)
     # plt.savefig("divan_prices_histogram.png")
