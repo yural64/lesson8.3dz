@@ -35,7 +35,7 @@ try:
     plt.xticks(np.arange(0, max_price + 10000, 10000))
 
     # Сохранение гистограммы как изображения (опционально)
-    # plt.savefig("divan_prices_histogram.png")
+    plt.savefig("divan_prices_histogram.png")
 
     # Отображение гистограммы
     plt.show()
